@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreador de Voos em Tempo Real</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🛩️ Rastreador de Voos em Tempo Real</h1>
+        <p class="subtitle">Veja aviões voando ao redor do mundo em tempo real</p>
+    </header>
+
+    <main>
+        <div class="location-section">
+            <div class="current-location">
+                <h3>📍 Sua Localização Atual</h3>
+                <p id="current-location">Obtendo localização...</p>
+                <button id="use-current-location" class="btn btn-primary">Usar Minha Localização</button>
+            </div>
+            
+            <div class="search-section">
+                <h3>🔍 Buscar por Local</h3>
+                <div class="search-container">
+                    <input type="text" id="location-search" placeholder="Digite uma cidade ou local (ex: São Paulo, Rio de Janeiro)">
+                    <button id="search-location" class="btn btn-secondary">Buscar Voos</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-section">
+            <p id="search-status">Clique em "Usar Minha Localização" ou digite um local para buscar voos</p>
+        </div>
+
+        <div id="flights-container">
+            <h2>✈️ Voos na Região</h2>
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Buscando voos...</p>
+            </div>
+            <div id="flights-list"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Criador: ShinaBr | Atualizado em tempo real</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
